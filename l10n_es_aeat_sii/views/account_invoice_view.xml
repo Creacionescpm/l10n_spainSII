@@ -28,6 +28,8 @@
                 <notebook position="inside">
                     <page string="SII" groups="account.group_account_invoice"  attrs="{'invisible': [('sii_enabled', '=', False)]}">
                         <group string="SII Information">
+                            <field name="sii_delegated_partner"/>
+                            <field name="sii_external_reference"/>
                             <field name="sii_description_method" invisible="1"/>
                             <field name="sii_description" attrs="{'required': [('sii_enabled', '=', True)], 'readonly': [('sii_description_method', '!=', 'manual')]}"/>
                             <field name="sii_refund_type"
@@ -91,6 +93,8 @@
                 <notebook position="inside">
                     <page string="SII" groups="account.group_account_invoice" attrs="{'invisible': [('sii_enabled', '=', False)]}">
                         <group string="SII Information">
+                            <field name="sii_delegated_partner"/>
+                            <field name="sii_external_reference"/>
                             <field name="sii_description_method" invisible="1"/>
                             <field name="sii_description" attrs="{'required': [('sii_enabled', '=', True)], 'readonly': [('sii_description_method', '!=', 'manual')]}"/>
                             <field name="sii_refund_type"
