@@ -164,6 +164,9 @@ class AccountInvoice(models.Model):
         string="Connector Jobs", copy=False,
     )
 
+    sii_delegated_partner = fields.Many2one(string="Entidad Sucedida", comodel_name="res.partner")
+    sii_external_reference = fields.Char(string='Referencia Externa')
+
     @api.onchange('sii_refund_type')
     def onchange_sii_refund_type(self):
         if (self.sii_enabled and self.sii_refund_type == 'S' and
